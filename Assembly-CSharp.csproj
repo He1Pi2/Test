@@ -61,6 +61,8 @@
     <Compile Include="Assets\Character2DPlatformer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fairfax\COPYRIGHT.txt" />
+    <None Include="Assets\Fairfax\FreeLicense.txt" />
     <None Include="Assets\Pixel Font - Tripfive\_README.txt" />
   </ItemGroup>
   <ItemGroup>
