@@ -58,8 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\CharacterAnim.cs" />
     <Compile Include="Assets\Player2DControl.cs" />
-    <Compile Include="Assets\Character2DPlatformer.cs" />
     <Compile Include="Assets\MenuManager.cs" />
+    <Compile Include="Assets\Character2DPlatformer.cs" />
     <Compile Include="Assets\MenuManager2.cs" />
   </ItemGroup>
   <ItemGroup>
