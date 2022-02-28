@@ -6,12 +6,12 @@ using System.Collections;
 public class Character2DPlatformer : MonoBehaviour
 {
 
-	public float speed = 1.5f; // скорость движения
-	public float acceleration = 100; // ускорение
-	public float jumpForce = 5; // сила прыжка
-	public float jumpDistance = 0.75f; // расстояние от центра объекта, до поверхности (определяется вручную в зависимости от размеров спрайта)
-	public bool facingRight = true; // в какую сторону смотрит персонаж на старте?
-	public KeyCode jumpButton = KeyCode.Space; // клавиша для прыжка
+	public float speed = 1.5f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	public float acceleration = 100; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	public float jumpForce = 5; // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	public float jumpDistance = 0.75f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
+	public bool facingRight = true; // пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ?
+	public KeyCode jumpButton = KeyCode.Space; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
 	private Vector3 direction;
 	private int layerMask;
@@ -25,7 +25,7 @@ public class Character2DPlatformer : MonoBehaviour
 		layerMask = ~layerMask;
 	}
 
-	bool GetJump() // проверяем, есть ли коллайдер под ногами
+	bool GetJump() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	{
 		bool result = false;
 
@@ -48,7 +48,7 @@ public class Character2DPlatformer : MonoBehaviour
 		}
 	}
 
-	void Flip() // отражение по горизонтали
+	void Flip() // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	{
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
@@ -58,7 +58,7 @@ public class Character2DPlatformer : MonoBehaviour
 
 	void Update()
 	{
-		Debug.DrawRay(transform.position, Vector3.down * jumpDistance, Color.red); // подсветка, для визуальной настройки jumpDistance
+		Debug.DrawRay(transform.position, Vector3.down * jumpDistance, Color.red); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ jumpDistance
 
 		if (Input.GetKeyDown(jumpButton) && GetJump())
 		{
