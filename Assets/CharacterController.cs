@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
 	public float jumpDistance = 0.75f; // ���������� �� ������ �������, �� ����������� (������������ ������� � ����������� �� �������� �������)
 	public bool facingRight = true; // � ����� ������� ������� �������� �� ������?
 	public KeyCode jumpButton = KeyCode.Space; // ������� ��� ������
+	public float HP;
 
 	private Vector3 direction;
 	private int layerMask;
@@ -71,5 +72,11 @@ public class CharacterController : MonoBehaviour
 		direction = new Vector2(h, 0);
 
 		if (h > 0 && !facingRight) Flip(); else if (h < 0 && facingRight) Flip();
+	}
+	
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if(collision.gameObject.tag == "Enemy")
+		    HP -= 50;
 	}
 }
