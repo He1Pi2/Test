@@ -55,6 +55,7 @@
      <Compile Include="Assets\MenuManager.cs" />
      <Compile Include="Assets\CharacterController.cs" />
      <Compile Include="Assets\MenuManager2.cs" />
+     <Compile Include="Assets\enemyfollow.cs" />
      <Compile Include="Assets\MenuManager3.cs" />
      <None Include="Assets\Fairfax\COPYRIGHT.txt" />
      <None Include="Assets\Fairfax\FreeLicense.txt" />

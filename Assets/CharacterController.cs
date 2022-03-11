@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -78,5 +79,9 @@ public class CharacterController : MonoBehaviour
 	{
 		if(collision.gameObject.tag == "Enemy")
 		    HP -= 50;
+	
+	    if(HP <= 0)
+	
+		Application.LoadLevel("Death");
 	}
 }
