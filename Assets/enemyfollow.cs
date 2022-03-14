@@ -7,7 +7,6 @@ public class enemyfollow : MonoBehaviour
     public float speed;
     private Transform player;
     private Animator anim;
-
     // Start is called before the first frame update
     void Start()
     {
