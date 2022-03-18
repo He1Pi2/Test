@@ -4,9 +4,43 @@ using UnityEngine;
 
 public class enemyfollow : MonoBehaviour
 {
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    
+    public int health;
+    public int damage;
     public float speed;
     private Transform player;
     private Animator anim;
+    private float stopTime;
+    public float startStopTime;
+    public float normalSpeed;
+    public GameObject deathEffect;
+    
+    private void start()
+    {
+        anim = GetComponent<Animator>();
+        player = FindObjectOfTipe<Player>();
+        normalSpeed = speed;
+    }
+
+    private void update()
+    {
+        if(stopTime <= 0)
+        {
+            speed = normalSpeed;
+        }
+        else
+        {
+            speed = 0;
+            stopTime -= Time.deltaTime;
+        }
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +55,23 @@ public class enemyfollow : MonoBehaviour
         anim.SetBool("isRunning", true);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerStay2D(Collider2D other)
     {
-        if(collision.gameObject.tag == "Player")
-           Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            if(timeBtwAttack <= 0)
+            {
+                anim.SetTrigger("attack");
+            }
+            else
+            {
+                timeBtwAttack -= Time.deltaTime;
+            }
+        }
+    }
+    public void OnEnemyAttack()
+    {
+        Instantiate(deathEffect, player.transform.position,Quaternion.indentity);
+        health -= damage;
     }
 }
