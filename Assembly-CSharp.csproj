@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\CharacterAnim.cs" />
      <Compile Include="Assets\HealthBar.cs" />
+     <Compile Include="Assets\Coin.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\zapiska.cs" />
      <Compile Include="Assets\ButtonTrigger.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\MenuManager.cs" />
      <Compile Include="Assets\CharacterController.cs" />
      <Compile Include="Assets\MenuManager2.cs" />
+     <Compile Include="Assets\MoneyText.cs" />
      <Compile Include="Assets\MenuManager3.cs" />
      <None Include="Assets\Fairfax\COPYRIGHT.txt" />
      <None Include="Assets\Fairfax\FreeLicense.txt" />
