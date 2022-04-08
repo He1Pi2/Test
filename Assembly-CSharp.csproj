@@ -55,6 +55,8 @@
      <Compile Include="Assets\ButtonTrigger.cs" />
      <Compile Include="Assets\hold.cs" />
      <Compile Include="Assets\Player2DControl.cs" />
+     <Compile Include="Assets\Sumka1.cs" />
+     <Compile Include="Assets\SumkaText.cs" />
      <Compile Include="Assets\Audio.cs" />
      <Compile Include="Assets\MenuManager.cs" />
      <Compile Include="Assets\CharacterController.cs" />
