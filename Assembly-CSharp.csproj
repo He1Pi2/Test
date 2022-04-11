@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterAnim.cs" />
+     <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Coin.cs" />
      <Compile Include="Assets\Movement.cs" />
